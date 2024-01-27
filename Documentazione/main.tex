@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{blindtext}
-\usepackage{hyperref}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{graphicx}
 \usepackage[letterpaper,top=3cm,bottom=3cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{enumitem}
@@ -11,7 +11,7 @@
 \begin{titlepage}
     \begin{center}
 
-        \textbf{\LARGE Università degli studi di salerno}
+        \textbf{\LARGE Università degli Studi di Salerno}
 
         \vspace{0.5cm}
         
@@ -43,32 +43,32 @@
 
         \newpage
         \section{Introduzione}
-            L'universo del vino è un affascinante viaggio sensoriale che coinvolge tutti i nostri sensi, dalla vista al gusto, fino all'olfatto. Gli appassionati di vino apprezzano non solo la bevanda in sé, ma anche la complessità e la raffinatezza che si celano dietro ogni bottiglia. \\
-            Per la realizzazione di questo progetto presente nella mia \href{https://github.com/bafiuss/SaporeDiVino.git}{repository GitHub}, sono presenti tutti i file relativi alla documentazione, presentazione e codice. 
+            L'universo del vino è un affascinante viaggio sensoriale che coinvolge tutti i nostri sensi, dalla vista al gusto, fino all'olfatto. Gli appassionati di vino apprezzano non solo la bevanda in sé, ma anche la complessità e la raffinatezza che si celano dietro ogni bottiglia. Inoltre, per gli appassionati, risulta essere una sfida sempre più avvincente la ricerca di vini che presentino una ottima qualità e che soddisfino le esigenze. In questo progetto affronteremo quella che è la tematica della qualità dei vini.\\
+            Per la realizzazione di questo progetto, presente nella mia \href{https://github.com/bafiuss/SaporeDiVino.git}{repository GitHub}, sono presenti tutti i file relativi alla documentazione, presentazione e codice. 
 
         
         \subsection{Obiettivi}
-            Durante realizzazione di questo progetto per il corso Fondamenti di Intelligenza Artificiale, mi sono cimentato in un problema comune di classificazione per quanto riguarda il Machine Learning; riguardo questo campo ho sempre avuto un interesse particolare ma prima di questa esperienza non né ho mai avuto un approccio effettivo. \\
-            Le tematiche che andremo a toccare e gli obiettivi principali sono:
+            Durante la realizzazione di questo progetto per il corso Fondamenti di Intelligenza Artificiale, mi sono cimentato in un \textbf{problema di classificazione} che riguarda il Machine Learning; riguardo questo campo ho sempre avuto un interesse particolare ma prima di questa esperienza non né ho mai avuto un approccio effettivo. \\
+            Le tematiche e gli obiettivi principali sono:
              \begin{itemize}
                 \item analisi dettagliata di un \href{https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009}{dataset di vini rossi};
                 \item l'identificazione di feature associate ai vini;
-                \item l'implementazione di un modello di apprendimento in grado di classificare in modo affidabile la qualità di vini sufficienti e insufficienti.
+                \item l'implementazione di un modello di apprendimento in grado di classificare in modo affidabile la qualità di vini almeno sufficienti e insufficienti.
             \end{itemize}
             
         \subsection{Specifica PEAS}
         \begin{itemize}
-            \item \textbf{Performance}, ovvero le misure di prestazione adottate per valutare l’operato di un agente. Nel mio caso precision, recall, accuracy e F-score;
-            \item \textbf{Environment}, ovvero gli elementi che formano l’ambiente. Nel mio caso sarà costituito dall'elenco dei vini rossi;
-            \item \textbf{Actuators}, ovvero gli attuatori disponibili all’agente per intraprendere le azioni. Nel mio caso sarà l'utilizzo di algoritmi di classificazione;
-            \item \textbf{Sensors}, ovvero i sensori attraverso i quali l'agente riceve gli input percettivi. Nel mio caso l'agente va ad acquisire i dati utili per classificare la qualità di un vino.
+            \item \textbf{Performance}: le misure di prestazione adottate per valutare l’operato di un agente. Nel mio caso precision, recall, accuracy e F-score;
+            \item \textbf{Environment}:  gli elementi che formano l’ambiente. Nel mio caso sarà costituito dall'elenco dei vini rossi;
+            \item \textbf{Actuators}: gli attuatori disponibili all’agente per intraprendere le azioni. Nel mio caso sarà l'utilizzo di algoritmi di classificazione;
+            \item \textbf{Sensors}: i sensori attraverso i quali l'agente riceve gli input percettivi. Nel mio caso l'agente va ad acquisire i dati utili per classificare la qualità di un vino.
         \end{itemize}
 
         \newpage
         \subsection{Caratteristiche dell'ambiente}
         L'ambiente è:
         \begin{itemize}
-            \item \textbf{Single-agent}.
+            \item \textbf{Single-agent};
             \item \textbf{Parzialmente osservabile}: non si ha accesso a tutte le informazioni complete relative ai vini;
             \item \textbf{Stocastico}: le qualità dei vini possono essere influenzate da fattori  difficilmente prevedibili o che presentano una certa variabilità;
             \item \textbf{Sequenziale}:  le predizioni passate sulla risposta al trattamento possono
@@ -79,7 +79,7 @@
 
         \subsection{Analisi del problema}
         L'intero progetto affronta, dunque, quello che un problema di \textbf{apprendimento supervisionato} basato sulla costruzione di un modello di Machine Learning. 
-        Inoltre, la classificazione che andremo ad utilizzare sarà di tipo \textbf{binario}, dato che può assumere valori 0 e 1 (1 se il vino ha una qualità almeno sufficiente, 0 se il vino ha una qualità insufficiente) \\
+        Inoltre, la classificazione che andremo ad utilizzare sarà di tipo \textbf{binario}, dato che può assumere valori 0 e 1 (1 se il vino ha una qualità almeno sufficiente, 0 se il vino ha una qualità insufficiente). \\
         Le tecnologie e gli strumenti che ho utilizzato sono i seguenti:
         \begin{itemize}
             \item \textbf{Visual Studio Code} come IDE;
@@ -101,7 +101,7 @@
         \end{itemize}
 
          \subsection{Data Collection}
-         In linea generale, la fase di Data Collection è il processo di raccolta, misurazione e analisi delle informazioni provenienti da innumerevoli fonti diverse. Dopo varie ricerche online del giusto dataset, ho deciso di scegliere un dataset presente su Kaggle,  una piattaforma online dedicata alle competizioni di data science, Machine Learning e analisi dei dati. \\Il riferimento al dataset lo si può trovare al seguente \href{https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009}{link}.
+         In linea generale, la fase di Data Collection è il processo di raccolta, misurazione e analisi delle informazioni provenienti da innumerevoli fonti diverse. Dopo varie ricerche online del giusto dataset, ho deciso di scegliere un dataset presente su Kaggle,  una piattaforma online dedicata alle competizioni di data science, Machine Learning e analisi dei dati. Il riferimento al dataset lo si può trovare al seguente \href{https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009}{link}.
 
          \subsection{Data Description}
          Il dataset scelto presenta un elenco di vini e per gli appassionati, si tratta di vini rossi provenienti dal Portogallo. Possiamo trovare la bellezza di ben 1599 righe e 12 colonne. L'ultima colonna, ovvero 'quality', è quella che utilizzeremo per stabilire se la qualità di un vino è almeno sufficiente (qualità del vino \( > \)=6) oppure insufficiente (qualità del vino \( < \)6). \\
@@ -122,7 +122,7 @@
          \end{enumerate}
 
         \newpage
-        Un altro strumento molto utile per capire meglio la distribuzione dei dati è l'uso dei grafici, più in particolare degli istogrammi. Di seguito vi è una rappresentazione grafica riguardante le la quantità di alcohol presente nei vini suddivisi per qualità
+        Un altro strumento molto utile per capire meglio la distribuzione dei dati è l'uso dei grafici, più in particolare degli istogrammi. Di seguito vi è una rappresentazione grafica riguardante la quantità di alcohol presente nei vini suddivisi per qualità:
 
         \begin{figure}[ht]
             \centering
@@ -133,7 +133,7 @@
 
         Come possiamo notare dal grafico, la qunatità di alcohol nei vini aumenta con l'aumentare della qualità di quest'ultimi.
         
-        Il grafico seguente, invece, rappresenta le frequenze di vini di ogni qualità
+        Il grafico seguente, invece, rappresenta le frequenze delle qualità:
         
         \begin{figure}[ht]
             \centering
@@ -147,7 +147,7 @@
         \newpage
         \subsection{Data Quality}
         In questa fase vado ad analizzare la qualità dei miei dati.
-        L'obiettivo primario, ricordiamo, è la corretta classificazione della qualità di un vino e classificarla come almeno sufficiente (qualità \( >\)=6) o come insufficiente (qualità \( <\)6). Non mi resta altro che suddividere la qualità in queste due categorie e con l'aiuto del grafico possiamo studiare al meglio la situazione
+        L'obiettivo primario, ricordiamo, è la corretta classificazione della qualità di un vino e classificarla come almeno sufficiente (assegnando il valore \textbf{1}) o come insufficiente (assegnando il valore \textbf{0}). Non mi resta che suddividere la qualità in queste due categorie e con l'aiuto del grafico possiamo studiare al meglio la situazione:
 
         \begin{figure}[ht]
             \centering
@@ -157,16 +157,16 @@
         \end{figure}
 
         Dal grafico a torta possiamo notare che i vini con una qualità almeno sufficiente sono molti di più rispetto ai vini con una qualità insufficiente.        
-        Inoltre, dobbiamo gestire anche il problema dello sbilanciamento, ma questa tematica sarà affrontata più avanti nella fase del Data Balancing.
+        Inoltre, dobbiamo gestire anche il problema legato allo sbilanciamento, ma questa tematica sarà affrontata più avanti nella fase di Data Balancing.
 
         \section{Data Preparation}
-        La fase di Data Preparation ha lo scopo di eseguire una serie di attività volte a raccogliere, pulire, trasformare e organizzare i dati in modo che siano pronti per l'analisi o per l'addestramento di modelli di machine learning.
-        Tale fase è suddivisa in diverse fasi, eseguite in modo cronologico:
+        La fase di Data Preparation ha lo scopo di eseguire una serie di attività volte a raccogliere, pulire, trasformare e organizzare i dati in modo che siano pronti per l'analisi o per l'addestramento di modelli di Machine Learning.
+        Tale fase è suddivisa in diverse sotto-fasi, eseguite in modo cronologico:
         \begin{itemize}
-            \item Data Cleaning
-            \item Feature Scaling
-            \item Feature Selection
-            \item Data Balancing
+            \item \textbf{Data Cleaning};
+            \item \textbf{Feature Scaling};
+            \item \textbf{Feature Selection};
+            \item \textbf{Data Balancing}.
         \end{itemize}
 
         \subsection{Data Cleaning}
@@ -174,18 +174,17 @@
 
         \newpage
         \subsection{Feature Scaling}
-        La fase di Feature Scaling consiste nel trasformare le variabili del dataset in modo che siano tutte su una scala comune. Il motivo principale dietro tale fase è che molte tecniche di Machine Learning possono essere influenzate negativamente da differenze nelle scale delle variabili. \\Le due tecniche che abbiamo studiato sono: min-max normalization e z-score normalization; tra le due ho optato per la tecnica del \textbf{min-max normalization}, dove l'obiettivo di questa tecnica è trasformare le variabili in modo che abbiano valori compresi tra un certo intervallo, di solito tra 0 e 1. \\
-         Prima di proseguire con la normalizzazione, mi sono adoperato ad effettuare la divisione del dataset e affrontare il problema del data leakage (fuga di dati). La divisione del dataset è avvenuta in due gruppi: il 70\% del è dedicato all'addestramento (\textbf{training set}) e il 30\% è dedicato al testing (\textbf{test set}).
-        Dopo aver normalizzato, posso passare alla fase successiva, ossia la Feature Selection.
+        La fase di Feature Scaling consiste nel trasformare le variabili del dataset in modo che siano tutte su una scala comune. Il motivo principale dietro tale fase è che molte tecniche di Machine Learning possono essere influenzate negativamente da differenze nelle scale delle variabili. \\Le due tecniche che abbiamo studiato sono: min-max normalization e z-score normalization; tra le due ho optato per la tecnica del \textbf{min-max normalization}, dove l'obiettivo di questa tecnica è trasformare le variabili in modo che abbiano valori compresi tra un certo intervallo, di solito tra 0 e 1. \\Prima di proseguire con la normalizzazione, mi sono adoperato ad effettuare la divisione del dataset e affrontare il problema del \textit{data leakage} (fuga di dati). La divisione del dataset è avvenuta in due gruppi: il 70\% del è dedicato all'addestramento (\textbf{training set}) e il 30\% è dedicato al testing (\textbf{test set}).
+        Dopo aver normalizzato posso passare alla fase successiva, ossia la Feature Selection.
 
         \subsection{Feature Selection}
-        Tale fase è un processo che coinvolge la scelta delle variabili (o caratteristiche) più rilevanti da utilizzare per costruire un modello predittivo o analizzare i dati. In generale, le "feature" si riferiscono alle variabili o attributi che vengono utilizzati per descrivere gli esempi nei dati. \\
+        Tale fase è un processo che coinvolge la scelta delle variabili (o caratteristiche) più rilevanti da utilizzare per costruire un modello predittivo o analizzare i dati. In generale, le \textit{feature} si riferiscono alle variabili o attributi che vengono utilizzati per descrivere gli esempi nei dati. \\
         Per ottenere una panoramica generale delle correlazioni tra le varie caratteristiche, mi sono aiutato con quella che viene chiamata \textbf{matrice di correlazione}: una matrice quadrata in cui ogni cella rappresenta la correlazione tra due variabili. Di seguito una guida per leggere al meglio una matrice di correlaizione:
         
         \begin{itemize}
             \item la diagonale principale della matrice contiene sempre valori di correlazione 1, poiché una variabile è sempre perfettamente correlata con se stessa;
-            \item le celle più scure o più chiare indicano correlazioni più forti o più deboli, rispettivamente.
-            \item le variabili sono fortemente correlate tra loro se hanno valori vicini a 1 o -1, mentre hanno una bassa correlazione se hanno valori vicini a 0.
+            \item le celle più scure indicano correlazioni più forti;
+            \item le variabili sono fortemente correlate tra loro se hanno valori vicini, in genere, a 1 o -1, mentre hanno una bassa correlazione se hanno valori vicini a 0.
         \end{itemize}
 
         \begin{figure}[ht]
@@ -199,22 +198,24 @@
         La matrice di correlazione appena calcolata presenta il problema di \textbf{multicollinearità}, ovvero in cui due o più variabili indipendenti sono fortemente correlate tra loro; infatti:
         \begin{itemize}
             \item \textbf{free-sulfur-dioxide} e \textbf{total-sulfur-dioxide} sono ben correlate positivamente (0.67);
+            \item \textbf{fixed-acidity} è ben correlata positivamente (0.67) con \textbf{density} e \textbf{citric-acid};
             \item\textbf{pH} e \textbf{fixed-acidity} sono altamente correlate negativamente (-0.69).
         \end{itemize}
+        Per affrontare il problema di multicollinearità, decido di scartare le feature \textbf{fixed-acidity}, \textbf{citric-acid} e \textbf{total-sulfur-dioxide}.
 
         \subsection{Data Balancing}
-        L'obiettivo del Data Balancing è affrontare situazioni in cui le classi di un insieme di dati non sono rappresentate in modo uniforme, cioè alcune classi possono essere sovrarappresentate rispetto ad altre.\\
-        Come enunciato in precedenza, il mio dataset presenta una classe maggioritaria di vini con qualità almeno sufficiente rispetto a vini con qualità insufficiente. Le tecinche che ho studiato durante il corso sono:
+         L'obiettivo del Data Balancing è affrontare situazioni in cui le classi di un insieme di dati non sono rappresentate in modo uniforme, cioè alcune classi possono essere sovrarappresentate rispetto ad altre.\\
+        Come enunciato in precedenza, il mio dataset presenta una classe maggioritaria di vini con qualità almeno sufficiente rispetto a vini con qualità insufficiente. Le tecniche che ho studiato durante il corso sono:
         \begin{itemize}
             \item la tecnica dell'\textbf{under-sampling}: eliminare casualmente le istanze della classe di maggioranza;
             \item la tecnica dell'\textbf{over-sampling}: aggiungere casualmente le istanze della classe di minoranza.
         \end{itemize}
         Entrambe le tecniche vanno usate nel giusto modo e trattate con particolare attenzione.\\ Per bilanciare il dataset e per evitare di andare ad effettuare duplicazioni che potrebbero causare overfitting (quando un modello di Machine Learning si adatta troppo bene ai dati di addestramento) con l'utilizzo dell'over-sampling, ho preferito utilizzare la tecnica dell'\textbf{under-sampling}. \\ La rimozione delle istanze della classe maggioritaria è stata effettuata tramite \textit{RandomUndersampler}, uno strumento contenuto nella libreria sklearn.
+        \newpage
         \section{Data Modeling}
-        Dopo aver effettuato le varie operazioni riguardanti la Data Preparation, possiamo affrontare quella che è la fase del Data Modeling. Tale fase, infatti, comprende diverse attività cruciali che si sulla rappresentazione dei dati in modo che possano essere utilizzati efficacemente dal modello di Machine Learning.
-
+        Dopo aver effettuato le varie operazioni riguardanti la Data Preparation, possiamo affrontare quella che è la fase del Data Modeling. Tale fase, infatti, comprende diverse attività cruciali che si basano sulla rappresentazione dei dati in modo che possano essere utilizzati efficacemente dal modello di Machine Learning.
         \subsection{Scelta dei classificatori}
-        I classificatori in Machine Learning sono algoritmi o modelli che vengono addestrati per assegnare etichette ai dati sulla base delle informazioni apprese da dati precedentemente etichettati durante la fase di addestramento. \\
+        I classificatori sono algoritmi o modelli che vengono addestrati per assegnare etichette ai dati, sulla base delle informazioni apprese da dati precedentemente etichettati durante la fase di addestramento. \\
         Nel mio caso, l'intero progetto è strutturato su un problema di classificazione binaria, dove la variabile target può assumere può assumere il valore 0 se la qualità è insufficiente, oppure il valore 1 se la qualità è almeno sufficiente. Tra i classificatori studiati durante il corso, possiamo trovare l'algoritmo di \textbf{Naive Bayes} (e relative varianti) e i \textbf{decision tree} (alberi decisionali). Navigando online se né possono trovare a migliaia, tra cui il Random Forest, K-Nearest Neighbors etc. \\
         La mia scelta di implementazione dei classificatori è ricaduta su:
         \begin{itemize}
@@ -223,7 +224,6 @@
             \item Random Forest.
         \end{itemize}
 
-        \newpage
         \subsubsection{Naive Bayes (definizione)}
         L'algoritmo di Naive Bayes è un tipo di algoritmo di apprendimento automatico supervisionato basato sul teorema di Bayes, che sfrutta la probabilità condizionale. L'approccio "naive" (ingenuo) deriva dal fatto che l'algoritmo assume l'indipendenza condizionale tra ogni coppia di caratteristiche, anche se questo potrebbe non essere sempre realistico nella pratica.
         Inoltre all'algoritmo di Naive Bayes sono associate diverse varianti, che però daremo la definizione del loro comportamento nella fase di addestramento; per adesso mi limito solo ad elencarle:
@@ -235,13 +235,31 @@
 
         \subsubsection{Decision Tree (definizione)}
         Gli alberi decisionali sono modelli utilizzati per compiti di classificazione (anche di regressione). Sono costruiti a partire da un set di dati di addestramento, e il loro obiettivo è quello di apprendere regole decisionali basate sugli attributi dei dati.
-        Un albero decisionale è costituito da nodi e archi. Ogni nodo rappresenta una decisione basata su un attributo specifico, mentre gli archi collegano i nodi e rappresentano le possibili scelte o risultati delle decisioni. Il nodo iniziale, chiamato nodo radice, rappresenta la decisione iniziale basata sull'attributo più significativo, attraverso misure come l’entropia
+        Un albero decisionale è costituito da \textbf{nodi} e \textbf{archi}. Ogni nodo rappresenta una decisione basata su un attributo specifico, mentre gli archi collegano i nodi e rappresentano le possibili scelte o risultati delle decisioni. Il nodo iniziale, chiamato nodo radice, rappresenta la decisione iniziale basata sull'attributo più significativo, attraverso misure come l’entropia
         o l’information-gain. Gli altri nodi, noti come nodi interni, rappresentano decisioni intermedie, mentre i nodi foglia rappresentano le etichette di classificazione.
 
         \subsubsection{Random Forest (definizione)}
-         L'algoritmo Random Forest combina l’output di più strutture
-         (Ensemble Learning) ad albero decisionale per raggiungere un unico risultato.  Random Forest combina i risultati di più alberi decisionali fornendo,
-         generalmente, risultati più accurati di un singolo Decision Tree.
+         Il Random Forest è un algoritmo di Machine Learning che rientra nella categoria degli algoritmi di "ensemble learning". Gli ensemble learning combinano diversi modelli per migliorare le prestazioni complessive del sistema. Il Random Forest è particolarmente efficace per problemi di classificazione come in questo caso.
+        \subsection{Lettura di una matrice di confusione}
+        Successivamente ci sarà utile la giusta lettura di un matrice di confusione: essa è una  matrice che riassume le istanze di test in base ai valori
+        predetti e ai valori veri; essi sono presentati come tabella di contingenza:
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.6\linewidth]{generic_confusion_matrix.png}
+            \caption{  matrice di confusione}
+            \label{fig:enter-label}
+        \end{figure}
+        
+        Rispettivamente abbiamo: 
+         \begin{itemize}
+            \item \textbf{True Positive} (TP, in alto a sinistra): il modello ha risposto correttamente \textit{almeno sufficiente};
+            \item \textbf{True Nevative} (TN, in basso a destra): il modello ha risposto correttamente \textit{insufficiente};
+            \item \textbf{False Positive} (FP, in alto a destra): il modello ha risposto in modo errato \textit{almeno insufficiente} invece di \textit{insufficiente}.
+            \item \textbf{False Negative} (FN, in basso a sinistra):
+            il modello ha risposto in modo errato \textit{insufficiente} invece di \textit{almeno sufficiente};
+            
+        \end{itemize}
+
          
         \subsection{Addestramento}
          In questa sezione procedo ad addestrare il modello in base agli algoritmi scelti in precedenza. Nel mio caso, come già detto, procedo prima all’addestramento usando Naive Bayes, per poi fare lo stesso con Decision Tree e infine Random Forest. Dopodiché valuterò le
@@ -268,7 +286,7 @@
         \end{figure}
         
         \subsubsection{Bernoulli Naive Bayes}
-        Infine, l'ultima variante che andremo a studiare è quella relativa all'algoritmo Bernoulli Naive Bayes. Tale algoritmo èè particolarmente utile per dati binari.
+        Infine, l'ultima variante che andremo a studiare è quella relativa all'algoritmo Bernoulli Naive Bayes. Tale algoritmo è particolarmente utile per dati binari. Vediamo come si comporta:
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.6\linewidth]{confusion_matrix-BNB.png}
@@ -277,11 +295,13 @@
         \end{figure}
 
         \subsubsection{Confronto tra GNB - MNB - BNB}
-        Dopo aver studiato il comportamento di ogni singola variante dell'algoritmo di Naive Bayes, passiamo a confrontare i risultati ottenuti e fare le prime deduzioni. Per fare ciò ho bisogno di metriche specifiche, chiamate \textbf{metriche di valutazione}. Le principaili e quelle più famose sono \textbf{precision}, \textbf{recall} e \textbf{accuracy}; ma ho voluto studiare il comportamento anche della metrica \textbf{F-score}:
+        Dopo aver studiato il comportamento di ogni singola variante dell'algoritmo di Naive Bayes, passiamo a confrontare i risultati ottenuti e fare le prime deduzioni. Per fare ciò ho bisogno di metriche specifiche, chiamate \textbf{metriche di valutazione}. Le principaili e quelle più famose sono \textbf{precision}, \textbf{recall} e \textbf{accuracy}, ma ho voluto studiare il comportamento anche della metrica \textbf{F-score}:
         \begin{itemize}
-            \item \textbf{Precision}: misura la proporzione di casi positivi effettivamente positivi tra tutte le predizioni positive fatte dal modello;
-            \item \textbf{Recall}: misura la capacit`a del modello di identificare correttamente i casi positivi rispetto al totale dei casi positivi reali;
-            \item \textbf{Accuracy}: misura la proporzione complessiva di predizioni corrette fatte dal modello rispetto al totale delle predizioni;
+            \item \textbf{Precision}:  misura la proporzione di casi positivi effettivamente positivi
+            tra tutte le predizioni positive fatte dal modello;
+            \item \textbf{Recall}: misura la capacità del modello di identificare correttamente i casi
+            positivi rispetto al totale dei casi positivi reali;
+            \item \textbf{Accuracy}: misura la percentuale di tutte le predizioni corrette rispetto al numero totale di predizioni;
             \item \textbf{F-score}: misura che viene calcolata tramite la media armonica di precision e recall.
         \end{itemize}
         \newpage
@@ -298,7 +318,7 @@
         Come possiamo notare dalla tabella, i valori delle metriche non sono altissimi: in particolare notiamo che l'algoritmo Bernoulli Naive Bayes pecca sulla precision e sull'accuracy ma compensa con un valore di recall abbastanza alto; per quanto riguarda gli altri due algoritmi hanno risultati simili. Per scelta implementativa, l'obiettivo è quello di \textbf{massimizzare la metrica F-score} e l'algoritmo massimizza questa metrica è l'algoritmo di \textbf{Gaussian Naive Bayes} (0.764846). 
 
         \subsubsection{Decision Tree}
-        Dopo aver dato la definizione in precedenza, cerchiamo di implementare l'algoritmo di Decision Tree, studiamo come si adatta ai dati e vediamo se otteniamo miglioramenti rispetto agli algoritmi di Naive Bayes
+        Dopo aver dato la definizione in precedenza, cerchiamo di implementare l'algoritmo di Decision Tree, studiamo come si adatta ai dati e vediamo se otteniamo miglioramenti rispetto agli algoritmi di Naive Bayes:
 
         \begin{figure}[ht]
             \centering
@@ -313,10 +333,10 @@
             Decision Tree & 0.704453 & 0.798165 & 0.713235 & 0.748387\\ \hline
         \end{tabular}
         \end{center}
-        Rispetto alla recall del Gaussian Naive Bayes (0.764846) abbiamo avuto un \textbf{peggioramento dell'F-score} (0.748387) ma anche un miglioramento per quanto riguarda la precision (0.793103), accuracy (0.757353 ). Ma a noi interessa solo dell'F-score, quindi abbiamo avuto un peggioramento delle prestazioni
+        Rispetto all'algoritmo Gaussian Naive Bayes (0.764846) abbiamo avuto un \textbf{peggioramento dell'F-score}.
         \newpage
         \subsubsection{Random Forest}
-        L'ultimo algoritmo che sono andato ad implementare è Random Forest. Vediamo come si comporta
+        L'ultimo algoritmo che sono andato ad implementare è Random Forest. Vediamo come si comporta:
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.6\linewidth]{confusion_matrix-RF.png}
@@ -327,49 +347,63 @@
         \begin{tabular}{|c|c|c|c|c|}
             \hline
             \textbf{Classificatore} & \textbf{Precision} & \textbf{Recall} & \textbf{Accuracy}& \textbf{F-score}\\ \hline
-            Decision Tree & 0.762332 & 0.779817 & 0.752451 & 0.770975\\ \hline
+            Random Forest & 0.762332 & 0.779817 & 0.752451 & 0.770975\\ \hline
         \end{tabular}
         \end{center}
-        In questo caso, abbiamo avuto un miglioramento della metrica F-score rispetto alla precedente del Gaussian Naive Bayes (0.764846)
-        
-        \newpage
-        \section{Evaluation}
-        Implementati tutti quelli che sono gli algoritmi per la classificazione scelti, facciamo una panoramica e mettiamoli tutti a confronto tramite l'uso di un istogramma.
+        In questo caso, abbiamo avuto un miglioramento della metrica F-score rispetto alla precedente del Gaussian Naive Bayes (0.764846).
+        \subsection{Risultati}
+        Implementati tutti quelli che sono gli algoritmi scelti per la classificazione, facciamo una panoramica e mettiamoli tutti a confronto tramite l'uso di un istogramma:
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.6\linewidth]{comparison.png}
             \caption{  confronto delle metriche di ogni algoritmo implementato}
             \label{fig:enter-label}
         \end{figure}
-        
-        Possiamo notare che alcuni algoritmi (come MNB, GNB) operano davvero in modo molto simile; però, come già detto in precedenza, l'obiettivo è quello di massimizzare il valore della metrica F-score (quindi avere il miglior apporto precision-recall) e l'algoritmo che si adatta meglio al valore è quello del Random Forest (0.770975).
-        Per avere più chiara la bontà del modello ho effettuato un’ulteriore valutazione attraverso la ROC
-        AUC curve, che consente di visualizzare il trade-off tra Recall e specificità. In poche parole misura la
+        \newpage
+            Possiamo notare banalmente che alcuni algoritmi (come MNB, GNB) operano davvero in modo molto simile oppure che la metrica di recall è sfruttata al meglio con l'algoritmo Bernoulli Naive Bayes. Vediamo in modo specifico il confronto tramite l'uso di una tabella
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \textbf{Classificatore} & \textbf{Precision} & \textbf{Recall} & \textbf{Accuracy}& \textbf{F-score}\\ \hline
+            Gaussian NB & 0.793103 & 0.738532 & 0.757353 & 0.764846\\ \hline
+            Multinomial NB & 0.784615 & 0.701835 & 0.737745 & 0.740920\\ \hline
+            Bernoulli NB & 0.541779 & 0.922018 & 0.541667 & 0.682513\\ \hline
+            Decision Tree & 0.704453 & 0.798165 & 0.713235 & 0.748387\\\hline
+             Random Forest & 0.762332 & 0.779817 & 0.752451 & \textbf{0.770975}\\ 
+            \hline
+        \end{tabular}
+        \end{center}
+       Come già detto in precedenza, l'obiettivo è quello di \textbf{massimizzare il valore della metrica F-score} (quindi avere il miglior apporto precision-recall) e l'algoritmo che si adatta meglio al valore è quello del \textbf{Random Forest}.
+       \newpage
+        \section{Evaluation}
+        Per avere più chiara la bontà del modello ho effettuato un’ulteriore valutazione attraverso la \textbf{ROC
+        curve} (legata al Random Forest), che consente di visualizzare il trade-off tra recall e specifity. In poche parole misura la
         capacità di identificare correttamente i casi negativi, ovvero quanto bene il modello riesce a distinguere
-        tra messaggi vini di con qualità insufficiente o almeno sufficiente.
+        tra vini di con qualità insufficiente o almeno sufficiente:
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.6\linewidth]{roc-auc-curve.png}
-            \caption{  confronto delle metriche di ogni algoritmo implementato}
+            \caption{  curva ROC - AUC}
             \label{fig:enter-label}
         \end{figure}
 
         La linea diagonale rappresenta il risultato di una scelta casuale, quindi un
         qualunque modello utile deve essere al suo di sopra. Inoltre un buon modello
-        deve posizionarsi in alto a sinistra, ovvero deve avere sensibilità elevata e basso
-        tasso di falsi positivi, cio‘e il modello deve riuscire correttamente a predirre che
-        un paziente ha il cancro al seno senza generare falsi positivi, ovvero predirre
+        deve avere sensibilità elevata e basso
+        tasso di falsi positivi, cioè il modello deve riuscire correttamente a predirre che
+        un vino abbia una qualità almeno sufficiente senza generare falsi positivi,
+        ovvero predirre
         che un vino abbia una qualità almeno sufficiente, ma in realtà non lo ha.
         
-        Ultima non meno
-        importante la AUC (Area sotto la curva) che fornisce una misura generale delle
+        Infine, la \textbf{AUC} (Area sotto la curva) che fornisce una misura generale delle
         prestazioni del modello, ad esempio un’area di 1.0 indica un modello perfetto,
         mentre un’area di 0.5 indica una scelta casuale. Il mio modello ha ottenuto
-        un valore pari a 0.84, che è un ottimo risultato ma non eccellente. Quindi posso considerare la
-        costruzione del modello e in generale dell’approccio completa.
+        un valore pari a 0.84 che è non è eccellente, ma un ottimo risultato. Quindi posso considerare la
+        costruzione del modello e in generale dell’approccio completa!
 
         \section{Conclusioni}
-        La realizzazione di questo progetto mi ha portato ad avere un primo approccio su un problema di Machine Learning. Posso dire che è stata un'esperienza che mi ha divertito e soprattutto appassionato nella ricerca di effettuare miglioramenti al modello. Che questo possa essere solo l'inizio di una strada interessante come quello dell'Intelligenza Artificiale!
+        I risultati ottenuti sono ottimi ma non perfetti: ciò potrebbe essere legato al fatto che il dataset preso in considerazione presenti la sola descrizione degli elementi chimici di cui è composto un vino, ma per determinare la qualità di un vino come ottima avremmo bisogno anche di informazioni come la varietà d'uva, la zona di provenienza, il grado di maturazione e così via.\\
+        Tutto sommato, la realizzazione di questo progetto mi ha portato ad avere un primo approccio su un problema di Machine Learning. Posso dire che è stata un'esperienza che mi ha divertito e soprattutto appassionato nella ricerca di effettuare miglioramenti al modello. Che questo possa essere solo l'inizio di una strada interessante come quella dell'Intelligenza Artificiale!
         
 \end{titlepage}
 \end{document}
